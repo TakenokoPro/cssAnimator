@@ -1,0 +1,26 @@
+//===============================================
+// COLOR SET
+$header_backgound: #222;
+
+//===============================================
+// STYLE
+.header {
+  background-color: $header_backgound;
+}
+.navigation {
+  background-color: $header_backgound;
+  ul {
+    margin: 0;
+    width: 980px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 14px;
+    line-height: 52px;
+    list-style: none;
+
+    li {
+      color: #999;
+    }
+  }
+}
