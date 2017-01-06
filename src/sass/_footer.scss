@@ -1,0 +1,14 @@
+//===============================================
+// STYLE
+//===============================================
+footer {
+  padding: 10px;
+  background-color: $footer_backgound;
+  .legal{
+    text-align: right;
+    a {
+      padding: 0 20px;
+      color: $header_color;
+    }
+  }
+}

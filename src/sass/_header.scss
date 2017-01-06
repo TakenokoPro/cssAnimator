@@ -1,0 +1,21 @@
+//===============================================
+// STYLE
+//===============================================
+header {
+  background-color: $header_backgound;
+  .header {
+    padding: 5px;
+    text-align: center;
+    img {
+      margin: 0 auto;
+    }
+  }
+  .navigation {
+    background-color: $header_backgound;
+    padding: 1px;
+    .btn {
+      background-color: $header_backgound;
+      color: $header_color;
+    }
+  }
+}
