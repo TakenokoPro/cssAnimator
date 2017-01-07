@@ -4,11 +4,27 @@
 footer {
   padding: 10px;
   background-color: $footer_backgound;
-  .legal{
+  .footer {
+    * {
+      max-width: 980px;
+      margin-bottom: 15px;
+      list-style: none;
+    }
+    .footer_item {
+      padding: 0 25px;
+      h5 {
+        border-bottom: 1px solid #666;
+        padding: 16px 0;
+      }
+    }
+  }
+  .legal {
     text-align: right;
     a {
       padding: 0 20px;
-      color: $header_color;
     }
+  }
+  * {
+    color: $footer_color;
   }
 }

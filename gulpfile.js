@@ -80,8 +80,8 @@ gulp.task('scss', function() {
   var processors = [
       cssnext()
   ];
-  return gulp.src(path.sassPath + '/*.scss')
-    .pipe(sass())
+  return gulp.src(path.sassPath + '/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
     .pipe(postcss(processors))
     .pipe(gulp.dest(path.cssBuildPath + '/'))
 });

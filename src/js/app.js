@@ -5,9 +5,7 @@ window.onload = () => {
   // マテリアル
   $.material.init()
   // カルーセル
-  $('.carousel.carousel-slider').carousel({full_width: true});
-  const carouselTimer = setInterval(() => {
-    console.log("carousel");
-    $('.carousel.carousel-slider').carousel('next');
-  }, 3000);
+  const carousel = $('.carousel.carousel-slider');
+  carousel.carousel({full_width: true});
+  const carouselTimer = setInterval(() => carousel.carousel('next'), 3000);
 }
