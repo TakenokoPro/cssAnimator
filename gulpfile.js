@@ -2,15 +2,19 @@
 
 // ディレクトリ
 var path = {
+  'rootPath': 'src', // 例）'htdocs/images'
   'htmlPath': 'src/html', // 例）'htdocs/images'
   'sassPath': 'src/sass', // 例）'htdocs/scss'
   'jsPath': 'src/js', // 例）'htdocs/javascripts'
   'imgPath': 'src/img', // 例）'htdocs/images'
+  'libPath': 'src/libs', // 例）'htdocs/lib'
 
-  'htmlBuildPath': 'build/html', // 例）'htdocs/images'
-  'cssBuildPath': 'build/css', // 例）'htdocs/stylesheets'
-  'jsBuildPath': 'build/js', // 例）'htdocs/stylesheets'
-  'imgBuildPath': 'build/img', // 例）'htdocs/stylesheets'
+  'rootBuildPath': 'dist',
+  'htmlBuildPath': 'dist/html', // 例）'htdocs/images'
+  'cssBuildPath': 'dist/css', // 例）'htdocs/stylesheets'
+  'jsBuildPath': 'dist/js', // 例）'htdocs/stylesheets'
+  'imgBuildPath': 'dist/img', // 例）'htdocs/stylesheets'
+  'libBuildPath': 'dist/libs', // 例）'htdocs/stylesheets'
 }
 
 // 使用パッケージ
@@ -29,8 +33,9 @@ var eslint = require('gulp-eslint'); //eslint処理
 
 //ローカルサーバー(モック非連動)
 gulp.task('webserver', function(){
-  gulp.src('./') // ルート・ディレクトリ
+  gulp.src('dist') // ルート・ディレクトリ
     .pipe(webserver({
+      fallback: 'index.html',
       livereload: true,
       directoryListing: false,
       open: true,
@@ -38,12 +43,19 @@ gulp.task('webserver', function(){
     }));
 });
 
+// ライブラリをパイプ
+gulp.task('pipe', function(){
+  gulp.src(path.libPath + '/**')
+  .pipe(gulp.dest(path.libBuildPath + '/'));
+});
+
 // htmlをコンパイル
 gulp.task('html', function(){
+  gulp.src(path.rootPath + '/index.html')
+  .pipe(gulp.dest(path.rootBuildPath + '/'));
   gulp.src(path.htmlPath + '/**/*.html')
   .pipe(gulp.dest(path.htmlBuildPath + '/'));
 });
-
 
 // jsをコンパイル
 gulp.task('js', function(){
@@ -77,7 +89,7 @@ gulp.task('scss', function() {
 
 // 画像圧縮
 gulp.task('imagemin', function(){
-  gulp.src(path.imgPath + '/*')
+  gulp.src(path.imgPath + '/**')
     .pipe(plumber())
     .pipe(imagemin({
         progressive: true,
@@ -89,10 +101,11 @@ gulp.task('imagemin', function(){
 
 // ファイル変更監視
 gulp.task('watch', function() {
-  gulp.watch(path.htmlPath + '/**/*.html', ['html']);
+  gulp.watch(path.libPath + '/**', ['pipe']);
+  gulp.watch(path.rootPath + '/**/*.html', ['html']);
   gulp.watch(path.sassPath + '/**/*.scss', ['scss']);
   gulp.watch(path.jsPath + '/**/*.js',['js']);
 });
 
 // タスク実行
-gulp.task('default', ['webserver','html','js','imagemin','scss','eslint','watch']); // デフォルト実行
+gulp.task('default', ['webserver','pipe','html','js','imagemin','scss','eslint','watch']); // デフォルト実行
