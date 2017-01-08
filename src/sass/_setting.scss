@@ -11,7 +11,10 @@ $footer_color: #ccc;
 // FONT SET
 //===============================================
 * {
-  font-family: 'Open Sans', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'Lucida Sans Unicode', Arial, Verdana, sans-serif;
+  font-family:
+    'Open Sans', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3',
+    'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'Lucida Sans Unicode',
+    Arial, Verdana, sans-serif !important;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -26,3 +29,4 @@ $p2: $p1 * $gold;
 $p3: $p2 * $gold;
 
 $content_max_width: 980px;
+$article_max_width: 720px;

@@ -1,0 +1,36 @@
+#imagepop {
+  padding-bottom: $p3;
+  .pop {
+    position: relative;
+    img {
+      width: 100%;
+    }
+    article {
+      position: absolute;
+      top: 0;
+      color: #ffffff;
+      h3 {
+        font-size: $p1;
+      }
+      p {
+        margin: 0;
+        font-size: $normal;
+        line-height: $p1;
+        letter-spacing: .065em;
+      }
+
+      &.right {
+        left: 60%;
+        padding: $normal;
+      }
+      &.left {
+        right: 60%;
+        padding: $normal;
+      }
+      &.top {
+        top: 0%;
+        padding: $p1;
+      }
+    }
+  }
+}

@@ -1,16 +1,25 @@
 #article {
-  max-width: $content_max_width;
+  max-width: $article_max_width;
+  margin-top: $p2;
+  margin-bottom: $p2;
   article {
-    padding: $m1;
+    padding: $p1;
+    padding-bottom: $p2;
+    margin-bottom: $p2;
+    background-color: #F6F6F6;
     ._title {
+      padding-top: $normal;
+      font-size: $p2;
     }
     ._sentence {
-      padding-top: $normal;
+      h1 {
+        font-size: $p1;
+      }
       p {
         margin: 0;
         text-indent: $normal;
-        font-size: $p1;
-        line-height: $p2;
+        font-size: $normal;
+        line-height: $p1;
         letter-spacing: .065em;
       }
     }
@@ -21,29 +30,30 @@
 //========================================================
   article{
     opacity: 0.0;
-    animation: article_fadeIn 1.0s ease-in-out 1.0s 1 normal;
+    animation: article_fadeIn 1.0s ease-in-out 0.8s 1 normal;
     animation-fill-mode: forwards;
+    ._title {}
   }
 }
 
 @keyframes article_fadeIn {
     0%    {
       opacity: 0.0;
-      transform: translate3d( 0, 60px, 0);
+      // transform: translate3d( 0, 60px, 0);
     }
     100%  {
       opacity: 1.0;
-      transform: translate3d( 0, 0, 0);
+      // transform: translate3d( 0, 0, 0);
     }
 }
 @keyframes article_fadeOut {
     0%    {
       opacity: 1.0;
-      transform: translate3d( 0, 60px, 0);
+      // transform: translate3d( 0, 60px, 0);
     }
     100%  {
       opacity: 0.0;
-      transform: translate3d( 0, 0, 0);
+      // transform: translate3d( 0, 0, 0);
     }
 }
 
