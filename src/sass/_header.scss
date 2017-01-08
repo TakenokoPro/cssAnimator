@@ -4,9 +4,10 @@
 header {
   background-color: $header_backgound;
   .header {
-    padding: 5px;
+    padding: $normal;
     text-align: center;
     img {
+      height: $p1;
       margin: 0 auto;
     }
   }
@@ -16,6 +17,14 @@ header {
     .btn {
       background-color: $header_backgound;
       color: $header_color;
+    }
+  }
+  .progress {
+    margin: 0;
+    background-color: $header_backgound;
+    .indeterminate {
+      background-color: #0000ff;
+      opacity: 0;
     }
   }
 }

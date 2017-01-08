@@ -105,6 +105,7 @@ gulp.task('watch', function() {
   gulp.watch(path.rootPath + '/**/*.html', ['html']);
   gulp.watch(path.sassPath + '/**/*.scss', ['scss']);
   gulp.watch(path.jsPath + '/**/*.js',['js']);
+  gulp.watch(path.imgPath + '/**/*',['imagemin']);
 });
 
 // タスク実行

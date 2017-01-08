@@ -5,8 +5,9 @@ footer {
   padding: 10px;
   background-color: $footer_backgound;
   .footer {
+    width: 100%;
+    max-width: 980px;
     * {
-      max-width: 980px;
       margin-bottom: 15px;
       list-style: none;
     }

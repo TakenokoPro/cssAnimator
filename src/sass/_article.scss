@@ -1,0 +1,53 @@
+#article {
+  max-width: $content_max_width;
+  article {
+    padding: $m1;
+    ._title {
+    }
+    ._sentence {
+      padding-top: $normal;
+      p {
+        margin: 0;
+        text-indent: $normal;
+        font-size: $p1;
+        line-height: $p2;
+        letter-spacing: .065em;
+      }
+    }
+  }
+
+//========================================================
+// スクロールアニメーション
+//========================================================
+  article{
+    opacity: 0.0;
+    animation: article_fadeIn 1.0s ease-in-out 1.0s 1 normal;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes article_fadeIn {
+    0%    {
+      opacity: 0.0;
+      transform: translate3d( 0, 60px, 0);
+    }
+    100%  {
+      opacity: 1.0;
+      transform: translate3d( 0, 0, 0);
+    }
+}
+@keyframes article_fadeOut {
+    0%    {
+      opacity: 1.0;
+      transform: translate3d( 0, 60px, 0);
+    }
+    100%  {
+      opacity: 0.0;
+      transform: translate3d( 0, 0, 0);
+    }
+}
+
+//========================================================
+// extend class
+//========================================================
+.base_anime {}

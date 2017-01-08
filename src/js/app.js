@@ -8,4 +8,6 @@ window.onload = () => {
   const carousel = $('.carousel.carousel-slider');
   carousel.carousel({full_width: true});
   const carouselTimer = setInterval(() => carousel.carousel('next'), 3000);
+  // スクロールアニメーション
+  var trigger = new ScrollTrigger();
 }

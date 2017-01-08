@@ -1,0 +1,19 @@
+#carousel {
+  overflow: hidden;
+  //height: 0px;
+  //opacity: 0.9;
+  opacity: 0;
+  animation: fadeIn 1.0s ease-in-out 0.3s 1 normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      //height: 0px;
+    }
+    100% {
+      opacity: 0.9;
+      //height: 400px;
+    }
+}

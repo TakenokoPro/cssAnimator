@@ -1,0 +1,79 @@
+#article_list {
+  max-width: $content_max_width;
+  article {
+    padding: $m1;
+    ._image {
+      width: 100%;
+      height: 194px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    ._title {
+      padding-top: $normal;
+      font-size: $p2;
+    }
+    ._date {
+      text-align: right;
+    }
+    ._summary {
+      padding-top: $normal;
+      p {
+        margin: 0;
+        text-indent: $normal;
+        line-height: $p1;
+      }
+    }
+  }
+
+//========================================================
+// スクロールアニメーション
+//========================================================
+  article{
+    animation: article_list_fadeIn 1.0s ease-in-out 1.0s 1 normal;
+    animation-fill-mode: forwards;
+    opacity: 0.0;
+    // transform: translate3d( 0, 60px, 0);
+/*
+    &.invisible {
+      transition: all 1.0s ease;
+      opacity: 0.0;
+      transform: translate3d( 0, 60px, 0);
+      // animation: article_list_fadeIn 1.0s ease-in-out 1.0s 1 normal;
+    }
+
+    &.visible {
+      transition: all 1.0s ease;
+      opacity: 1.0;
+      transform: translate3d( 0, 0, 0);
+      // animation: article_list_fadeOut 1.0s ease-in-out 1.0s 1 normal;
+    }
+*/
+    &.invisible {
+      visibility: visible;
+    }
+  }
+
+  @for $cnt from 1 through 10{
+    article:nth-child(#{$cnt}) {
+      animation-delay: ($cnt*0.5)+s;
+      transition-delay: ($cnt*0.5)+s;
+    }
+  }
+}
+
+@keyframes article_list_fadeIn {
+    0%    {
+      opacity: 0.0;
+      transform: translate3d( 0, 60px, 0);
+    }
+    100%  {
+      opacity: 1.0;
+      transform: translate3d( 0, 0, 0);
+    }
+}
+
+//========================================================
+// extend class
+//========================================================
+.base_anime {}

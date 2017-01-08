@@ -16,15 +16,16 @@
   <script type="text/javascript" src="libs/js/material.min.js"></script>
   <script type="text/javascript" src="libs/js/ripples.min.js"></script>
   <script type="text/javascript" src="libs/js/materialize.min.js"></script>
+  <script type="text/javascript" src="libs/js/ScrollTrigger.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 
-  <!-- ========================================================================================== -->
+  <!-- ==================================================== -->
   <!-- HEADER -->
   <header>
     <div class="header btn-group-justified">
-      <a href="javascript:void(0)" class="brand"><img src=""></a>
+      <a href="javascript:void(0)" class="brand"><img src="img/LOGO.svg"></a>
     </div>
     <div class="navigation btn-group-justified">
       <a href="javascript:void(0)" class="btn waves-effect waves-light">Home</a>
@@ -32,36 +33,109 @@
       <a href="javascript:void(0)" class="btn waves-effect waves-light">About</a>
       <a href="javascript:void(0)" class="btn waves-effect waves-light">Support</a>
     </div>
+    <div class="progress"><div class="indeterminate"></div></div>
   </header>
-  <!-- ========================================================================================== -->
+  <!-- ==================================================== -->
   <!-- CAROUSEL -->
-  <div class="carousel carousel-slider center" data-indicators="true">
-    <div class="carousel-fixed-item center"><a class="btn waves-effect white grey-text darken-text-2">button</a></div>
-    <div class="carousel-item red white-text" href="#one!"><h2>First Panel</h2><p class="white-text">This is your first panel</p></div>
-    <div class="carousel-item amber white-text" href="#two!"><h2>Second Panel</h2><p class="white-text">This is your second panel</p></div>
-    <div class="carousel-item green white-text" href="#three!"><h2>Third Panel</h2><p class="white-text">This is your third panel</p></div>
-    <div class="carousel-item blue white-text" href="#four!"><h2>Fourth Panel</h2><p class="white-text">This is your fourth panel</p></div>
+  <div id="carousel">
+    <div class="carousel carousel-slider center" data-indicators="true">
+      <div class="carousel-fixed-item center"><a class="btn waves-effect white grey-text darken-text-2">button</a></div>
+      <div class="carousel-item red white-text" href="#one!"><h2>First Panel</h2><p class="white-text">This is your first panel</p></div>
+      <div class="carousel-item amber white-text" href="#two!"><h2>Second Panel</h2><p class="white-text">This is your second panel</p></div>
+      <div class="carousel-item green white-text" href="#three!"><h2>Third Panel</h2><p class="white-text">This is your third panel</p></div>
+      <div class="carousel-item blue white-text" href="#four!"><h2>Fourth Panel</h2><p class="white-text">This is your fourth panel</p></div>
+    </div>
   </div>
-  <!-- ========================================================================================== -->
-  <div><a href="build/html/header.html">header</a></div>
-  <!-- ========================================================================================== -->
+  <!-- ==================================================== -->
+  <!-- ARTICLE -->
+  <div id="article" class="row">
+    <article class="col-md-12">
+      <div class="_title">タイトル</div>
+      <div class="_sentence">
+          <p>
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+          </p><p>
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+          </p><p>
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+          </p><p>
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+          </p><p>
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+          </p><p>
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+          </p>
+      </div>
+    </article>
+  </div>
+  <!-- ==================================================== -->
+  <div id="article_list" class="row">
+  <!-- CONTANTS 1 -->
+  <article class="col-md-6" onclick="" data-scroll>
+    <div class="waves-effect">
+      <div class="_image" style='background-image: url("img/DSC_0126.jpg")'></div>
+      <div class="_title">記事1</div>
+      <div class="_date">20XX.XX.XX</div>
+      <div class="_summary">
+        <p>
+          ぶんしょうぶんしょうぶんしょうぶんしょう
+          ぶんしょうぶんしょうぶんしょうぶんしょう
+          ぶんしょうぶんしょうぶんしょうぶんしょう
+        </p><p>
+          ぶんしょうぶんしょうぶんしょうぶんしょう
+          ぶんしょうぶんしょうぶんしょうぶんしょう
+        </p>
+      </div>
+    </div>
+  </article>
+  <!-- CONTANTS 2 -->
+  <article class="col-md-6" onclick="" data-scroll>
+    <div class="waves-effect">
+      <div class="_image" style='background-image: url("img/DSC_0138.jpg")'></div>
+      <div class="_title">記事2</div>
+      <div class="_date">20XX.XX.XX</div>
+      <div class="_summary">
+        <p>
+          ぶんしょうぶんしょうぶんしょうぶんしょう
+          ぶんしょうぶんしょうぶんしょうぶんしょう
+          ぶんしょうぶんしょうぶんしょうぶんしょう
+          ぶんしょうぶんしょうぶんしょうぶんしょう
+        </p><p>
+          ぶんしょうぶんしょうぶんしょうぶんしょう
+          ぶんしょうぶんしょうぶんしょうぶんしょう
+        </p>
+      <div>
+    </div>
+  </article>
+  </div>
+  <!-- ==================================================== -->
+  <!-- FOOTER -->
   <footer>
     <div class="row footer">
-      <div class="footer_item col-md-4">
+      <div class="col-md-4 footer_item">
         <h5>カテゴリ1</h5>
         <ul>
           <li><a>コンテンツ1</a></li>
           <li><a>コンテンツ2</a></li>
         </ul>
       </div>
-      <div class="footer_item col-md-4">
+      <div class="col-md-4 footer_item">
         <h5>カテゴリ2</h5>
         <ul>
           <li><a>コンテンツ1</a></li>
           <li><a>コンテンツ2</a></li>
         </ul>
       </div>
-      <div class="footer_item col-md-4">
+      <div class="col-md-4 footer_item">
         <h5>カテゴリ3</h5>
         <ul>
           <li><a>コンテンツ1</a></li>
@@ -75,6 +149,6 @@
       <a>特定商取引法に基づく表示</a>
     <div>
   </footer>
-  <!-- ========================================================================================== -->
+  <!-- ==================================================== -->
 </body>
 </html>
