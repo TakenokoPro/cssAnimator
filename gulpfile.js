@@ -6,14 +6,14 @@ var path = {
   'htmlPath': 'src/html', // 例）'htdocs/images'
   'sassPath': 'src/sass', // 例）'htdocs/scss'
   'jsPath': 'src/js', // 例）'htdocs/javascripts'
-  'imgPath': 'src/img', // 例）'htdocs/images'
+  'imgPath': 'src/images', // 例）'htdocs/images'
   'libPath': 'src/libs', // 例）'htdocs/lib'
 
   'rootBuildPath': 'dist',
   'htmlBuildPath': 'dist/html', // 例）'htdocs/images'
   'cssBuildPath': 'dist/css', // 例）'htdocs/stylesheets'
   'jsBuildPath': 'dist/js', // 例）'htdocs/stylesheets'
-  'imgBuildPath': 'dist/img', // 例）'htdocs/stylesheets'
+  'imgBuildPath': 'dist/images', // 例）'htdocs/stylesheets'
   'libBuildPath': 'dist/libs', // 例）'htdocs/stylesheets'
 }
 
