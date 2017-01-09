@@ -9,12 +9,12 @@ var path = {
   'imgPath': 'src/img', // 例）'htdocs/images'
   'libPath': 'src/libs', // 例）'htdocs/lib'
 
-  'rootBuildPath': 'dist',
-  'htmlBuildPath': 'dist/html', // 例）'htdocs/images'
-  'cssBuildPath': 'dist/css', // 例）'htdocs/stylesheets'
-  'jsBuildPath': 'dist/js', // 例）'htdocs/stylesheets'
-  'imgBuildPath': 'dist/img', // 例）'htdocs/stylesheets'
-  'libBuildPath': 'dist/libs', // 例）'htdocs/stylesheets'
+  'rootBuildPath': 'docs',
+  'htmlBuildPath': 'docs/html', // 例）'htdocs/images'
+  'cssBuildPath': 'docs/css', // 例）'htdocs/stylesheets'
+  'jsBuildPath': 'docs/js', // 例）'htdocs/stylesheets'
+  'imgBuildPath': 'docs/img', // 例）'htdocs/stylesheets'
+  'libBuildPath': 'docs/libs', // 例）'htdocs/stylesheets'
 }
 
 // 使用パッケージ
@@ -33,7 +33,7 @@ var eslint = require('gulp-eslint'); //eslint処理
 
 //ローカルサーバー(モック非連動)
 gulp.task('webserver', function(){
-  gulp.src('dist') // ルート・ディレクトリ
+  gulp.src('docs') // ルート・ディレクトリ
     .pipe(webserver({
       fallback: 'index.html',
       livereload: true,
