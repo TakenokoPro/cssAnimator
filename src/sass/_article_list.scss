@@ -1,13 +1,22 @@
 #article_list {
   max-width: $content_max_width;
+  padding: $p3 0;
+  #article_list_related {
+    text-align: center;
+    font-size: $p2;
+  }
   article {
-    padding: $m1;
+    padding: $p2 $m1;
     .waves-effect {
       width: 100%;
+      background-color: #F3F3F3;
+      border-radius: 8px;
+      padding-bottom: $p2;
     }
     ._image {
       width: 100%;
       height: 194px;
+      object-fit: cover;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -35,34 +44,28 @@
 //========================================================
 #article_list {
   article{
-    animation: article_list_fadeIn 1.0s ease-in-out 1.0s 1 normal;
-    animation-fill-mode: forwards;
-    opacity: 0.0;
-    // transform: translate3d( 0, 60px, 0);
-  /*
+    //animation: article_list_fadeIn 1.0s ease-in-out 1.0s 1 normal;
+    //animation-fill-mode: forwards;
+    //opacity: 0.0;
+
     &.invisible {
-      transition: all 1.0s ease;
-      opacity: 0.0;
-      transform: translate3d( 0, 60px, 0);
-      // animation: article_list_fadeIn 1.0s ease-in-out 1.0s 1 normal;
+      transition: all 0.2s ease;
+      opacity: 0.6;
+      transform: translate3d( 0, 10px, 0);
     }
 
     &.visible {
       transition: all 1.0s ease;
       opacity: 1.0;
       transform: translate3d( 0, 0, 0);
-      // animation: article_list_fadeOut 1.0s ease-in-out 1.0s 1 normal;
     }
-  */
-    &.invisible {
-      visibility: visible;
-    }
+    &.invisible { visibility: visible; }
   }
 
   @for $cnt from 1 through 10{
     article:nth-child(#{$cnt}) {
-      animation-delay: ($cnt*0.5)+s;
-      transition-delay: ($cnt*0.5)+s;
+      //animation-delay: ($cnt*0.2)+s;
+      transition-delay: ($cnt*0.2)+s;
     }
   }
 }
