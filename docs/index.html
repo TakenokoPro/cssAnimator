@@ -46,9 +46,13 @@
       <div class="carousel-item blue white-text" href="#four!"><h2>Fourth Panel</h2><p class="white-text">This is your fourth panel</p></div>
     </div>
   </div>
+  <div class="diviver leave">
+    <div class="z-depth-3 waves-effect diviver_button1" onclick="onToggleClass('#article');onToggleClass('.diviver');"><img src="img/ic_check_white_48px.svg"></div>
+    <div class="z-depth-3 waves-effect diviver_button2" onclick="onToggleClass('#article');onToggleClass('.diviver');"><img src="img/ic_close_white_48px.svg"></div>
+  </div>
   <!-- ==================================================== -->
   <!-- ARTICLE -->
-  <div id="article" class="row">
+  <div id="article" class="row leave">
     <article class="col-md-12">
       <div class="_title">タイトル</div>
       <div class="_sentence">
@@ -180,5 +184,12 @@
     <div>
   </footer>
   <!-- ==================================================== -->
+  <!-- SCRIPT -->
+  <script type="text/javascript">
+  function onToggleClass(className) {
+    $(className).toggleClass("enter");
+    $(className).toggleClass("leave");
+  }
+  </script>
 </body>
 </html>

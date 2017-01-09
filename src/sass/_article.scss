@@ -1,7 +1,6 @@
 #article {
   max-width: $article_max_width;
-  margin-top: $p2;
-  margin-bottom: $p2;
+  margin-bottom: 0;
   article {
     padding: $p1;
     padding-bottom: $p2;
@@ -32,11 +31,23 @@
 //========================================================
 // スクロールアニメーション
 //========================================================
-#article article{
-  opacity: 0.0;
-  animation: article_fadeIn 1.0s ease-in-out 0.8s 1 normal;
-  animation-fill-mode: forwards;
-  ._title {}
+#article {
+  overflow: hidden;
+  article{
+    opacity: 0.0;
+    animation: article_fadeIn 1.0s ease-in-out 0.8s 1 normal;
+    animation-fill-mode: forwards;
+  }
+  &.enter {
+    opacity: 1.0;
+    max-height: 4000px;
+    transition: all 1.0s ease;
+  }
+  &.leave {
+    opacity: 0.0;
+    max-height: 0;
+    transition: all 1.0s ease;
+  }
 }
 
 @keyframes article_fadeIn {

@@ -1,0 +1,45 @@
+$divier_length: 64px;
+
+.diviver {
+  position: relative;
+  width: 100%;
+  opacity: 0;
+  animation: diviver_button_fadeIn 1.0s ease-in-out 2.0s 1 normal;
+  animation-fill-mode: forwards;
+  z-index: 1;
+  .diviver_button1, .diviver_button2 {
+    position: absolute;
+    top: -$divier_length / 2;
+    left: 12.5%;
+    margin-left: -$divier_length / 2;
+    width: $divier_length;
+    height: $divier_length;
+    border-radius: 100%;
+    img {
+      width: $divier_length;
+      height: $divier_length;
+      padding: $divier_length / 4;
+    }
+  }
+  .diviver_button1 {
+    background-color: #2bf28e;
+  }
+  .diviver_button2 {
+    background-color: #F66F6F;
+  }
+  &.enter {
+    .diviver_button1 { opacity: 0; }
+    .diviver_button2 { opacity: 1.0; }
+    transition: all 2.0s ease;
+  }
+  &.leave {
+    .diviver_button1 { opacity: 1.0; }
+    .diviver_button2 { opacity: 0; }
+    transition: all 2.0s ease;
+  }
+}
+
+@keyframes diviver_button_fadeIn {
+  0%    { opacity: 0.0; }
+  100%  { opacity: 1.0; }
+}
