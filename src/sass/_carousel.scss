@@ -2,18 +2,23 @@
   overflow: hidden;
   //height: 0px;
   //opacity: 0.9;
+  max-height: 0px;
   opacity: 0;
-  animation: fadeIn 1.0s ease-in-out 0.3s 1 normal;
+  animation: fadeIn 1.0s ease-in-out 2.0s 1 normal;
   animation-fill-mode: forwards;
+  pointer-events: none;
+  .btn {
+    pointer-events: all;
+  }
 }
 
 @keyframes fadeIn {
     0% {
       opacity: 0;
-      //height: 0px;
+      max-height: 0px;
     }
     100% {
       opacity: 0.9;
-      //height: 400px;
+      max-height: 1000px;
     }
 }

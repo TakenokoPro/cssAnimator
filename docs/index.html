@@ -33,7 +33,6 @@
       <a href="javascript:void(0)" class="btn waves-effect waves-light">About</a>
       <a href="javascript:void(0)" class="btn waves-effect waves-light">Support</a>
     </div>
-    <div class="progress"><div class="indeterminate"></div></div>
   </header>
   <!-- ==================================================== -->
   <!-- CAROUSEL -->
@@ -50,28 +49,18 @@
     <div class="z-depth-3 waves-effect diviver_button1" onclick="onToggleClass('#article');onToggleClass('.diviver');"><img src="images/ic_check_white_48px.svg"></div>
     <div class="z-depth-3 waves-effect diviver_button2" onclick="onToggleClass('#article');onToggleClass('.diviver');"><img src="images/ic_close_white_48px.svg"></div>
   </div>
+  <div class="progress"><div class="indeterminate"></div></div>
   <!-- ==================================================== -->
   <!-- ARTICLE -->
   <div id="article" class="row leave">
     <article class="col-md-12">
+      <time class="_date">20XX/01/12 08:00</time>
       <div class="_title">タイトル</div>
       <div class="_sentence">
-        <h1>セクション1</h1>
+        <h2>ヘッダー2</h2>
         <p>ぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょう</p>
         <p>ぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょう</p>
-        <p>ぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょう</p>
-        <h1>セクション2</h1>
-        <p>ぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょう</p>
-        <p>ぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょう</p>
-        <p>ぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょう</p>
-      </div>
-    </article>
-    <article class="col-md-12">
-      <div class="_title">タイトル</div>
-      <div class="_sentence">
-        <h1>セクション1</h1>
-        <p>ぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょう</p>
-        <p>ぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょう</p>
+        <h3>ヘッダー3</h3>
         <p>ぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょう</p>
         <!-- CODEPEN -->
         <iframe
@@ -82,11 +71,12 @@
           See the Pen <a href='http://codepen.io/TakenokoPro/pen/pRjExv/'>pRjExv</a> by Takenoko (<a href='http://codepen.io/TakenokoPro'>@TakenokoPro</a>) on <a href='http://codepen.io'>CodePen</a>.
         </iframe>
         <!-- CODEPEN -->
-        <h1>セクション2</h1>
+        <h4>HEADER4</h3>
         <p>ぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょう</p>
         <p>ぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょう</p>
         <p>ぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょう</p>
       </div>
+      <hr><div class="_chips"><div class="chip _t">Twitter</div><div class="chip _f">FaceBook</div></div>
     </article>
   </div>
   <!-- ==================================================== -->
@@ -113,43 +103,44 @@
   </div>
   <!-- ==================================================== -->
   <div id="article_list" class="row">
-  <!-- CONTANTS 1 -->
-  <article class="col-md-6" onclick="" data-scroll>
-    <div class="waves-effect">
-      <div class="_image" style='background-image: url("images/DSC_0126.jpg")'></div>
-      <div class="_title">記事1</div>
-      <div class="_date">20XX.XX.XX</div>
-      <div class="_summary">
-        <p>
-          ぶんしょうぶんしょうぶんしょうぶんしょう
-          ぶんしょうぶんしょうぶんしょうぶんしょう
-          ぶんしょうぶんしょうぶんしょうぶんしょう
-        </p><p>
-          ぶんしょうぶんしょうぶんしょうぶんしょう
-          ぶんしょうぶんしょうぶんしょうぶんしょう
-        </p>
+    <div id="article_list_related" class="col-sm-12">related posts</div>
+    <!-- CONTANTS 1 -->
+    <article class="col-sm-6 col-md-6" onclick="" data-scroll>
+      <div class="waves-effect">
+        <img class="_image" src="images/DSC_0126.jpg"/>
+        <div class="_title">記事1</div>
+        <div class="_date">20XX.XX.XX</div>
+        <div class="_summary">
+          <p>
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+          </p><p>
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+          </p>
+        </div>
       </div>
-    </div>
-  </article>
-  <!-- CONTANTS 2 -->
-  <article class="col-md-6" onclick="" data-scroll>
-    <div class="waves-effect">
-      <div class="_image" style='background-image: url("images/DSC_0138.jpg")'></div>
-      <div class="_title">記事2</div>
-      <div class="_date">20XX.XX.XX</div>
-      <div class="_summary">
-        <p>
-          ぶんしょうぶんしょうぶんしょうぶんしょう
-          ぶんしょうぶんしょうぶんしょうぶんしょう
-          ぶんしょうぶんしょうぶんしょうぶんしょう
-          ぶんしょうぶんしょうぶんしょうぶんしょう
-        </p><p>
-          ぶんしょうぶんしょうぶんしょうぶんしょう
-          ぶんしょうぶんしょうぶんしょうぶんしょう
-        </p>
-      <div>
-    </div>
-  </article>
+    </article>
+    <!-- CONTANTS 2 -->
+    <article class="col-sm-6 col-md-6" onclick="" data-scroll>
+      <div class="waves-effect">
+        <img class="_image" src="images/DSC_0138.jpg"/>
+        <div class="_title">記事2</div>
+        <div class="_date">20XX.XX.XX</div>
+        <div class="_summary">
+          <p>
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+          </p><p>
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+            ぶんしょうぶんしょうぶんしょうぶんしょう
+          </p>
+        <div>
+      </div>
+    </article>
   </div>
   <!-- ==================================================== -->
   <!-- FOOTER -->

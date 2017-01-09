@@ -1,5 +1,6 @@
 #imagepop {
-  padding-bottom: $p3;
+  padding-bottom: $p1;
+  pointer-events: none;
   .pop {
     position: relative;
     img {
@@ -11,7 +12,8 @@
       top: 0;
       color: #ffffff;
       h3 {
-        font-size: $p1;
+        font-size: $p2;
+        line-height: $p2;
       }
       p {
         margin: 0;
