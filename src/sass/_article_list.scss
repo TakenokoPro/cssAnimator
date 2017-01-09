@@ -2,6 +2,9 @@
   max-width: $content_max_width;
   article {
     padding: $m1;
+    .waves-effect {
+      width: 100%;
+    }
     ._image {
       width: 100%;
       height: 194px;
@@ -25,16 +28,18 @@
       }
     }
   }
+}
 
 //========================================================
 // スクロールアニメーション
 //========================================================
+#article_list {
   article{
     animation: article_list_fadeIn 1.0s ease-in-out 1.0s 1 normal;
     animation-fill-mode: forwards;
     opacity: 0.0;
     // transform: translate3d( 0, 60px, 0);
-/*
+  /*
     &.invisible {
       transition: all 1.0s ease;
       opacity: 0.0;
@@ -48,7 +53,7 @@
       transform: translate3d( 0, 0, 0);
       // animation: article_list_fadeOut 1.0s ease-in-out 1.0s 1 normal;
     }
-*/
+  */
     &.invisible {
       visibility: visible;
     }

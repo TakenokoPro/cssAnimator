@@ -4,6 +4,7 @@
     position: relative;
     img {
       width: 100%;
+      background-color: #000;
     }
     article {
       position: absolute;
@@ -33,4 +34,99 @@
       }
     }
   }
+}
+
+//========================================================
+// スクロールアニメーション
+//========================================================
+#imagepop {
+  @for $cnt from 1 through 10{
+    .pop:nth-child(#{$cnt}) {
+      @if $cnt % 2 == 0 {
+        animation: r_imagepop_fadeIn 1.0s ease-in-out 1.0s 1 normal;
+      } @else {
+        animation: l_imagepop_fadeIn 1.0s ease-in-out 1.0s 1 normal;
+      }
+      opacity: 0.0;
+      animation-fill-mode: forwards;
+      animation-delay: ($cnt*0.5)+s;
+      transition-delay: ($cnt*0.5)+s;
+    }
+  }
+}
+
+#imagepop {
+  @for $cnt from 1 through 10{
+    .pop:nth-child(#{$cnt}) {
+      &.invisible {
+        //opacity: 0.0;
+        //transition: all 1.0s ease;
+        //@if $cnt % 2 == 0{transform: rotateY(-180deg);} @else {transform: rotateY( 180deg);}
+      }
+      &.visible {
+        //opacity: 1.0;
+        //transition: all 1.0s ease;
+        //@if $cnt % 2 == 0 {transform: rotateY(-360deg);} @else {transform: rotateY( 360deg);}
+      }
+    }
+  }
+}
+
+#imagepop {
+  .pop{
+    img {
+      &.invisible {
+        filter: brightness(1) blur(5px);
+        transition: all 1.0s ease;
+      }
+      &.visible {
+        filter: brightness(0.8) blur(0px);
+        transition: all 1.0s ease;
+      }
+    }
+    article {
+      &.invisible {
+        h3, p {
+          opacity: 0.0;
+          transition: all 1.0s ease;
+        }
+        h3 {
+          // font-size: $m1;
+        }
+      }
+      &.visible {
+        h3, p {
+          opacity: 1.0;
+          transition: all 1.0s ease;
+        }
+        h3 {
+          // font-size: $p1;
+        }
+      }
+    }
+  }
+  .invisible {
+    visibility: visible;
+  }
+}
+
+@keyframes r_imagepop_fadeIn {
+    0%    {
+      opacity: 0.0;
+      transform: translate3d( 30px, 0, 0);
+    }
+    100%  {
+      opacity: 1.0;
+      transform: translate3d( 0, 0, 0);
+    }
+}
+@keyframes l_imagepop_fadeIn {
+    0%    {
+      opacity: 0.0;
+      transform: translate3d(-30px, 0, 0);
+    }
+    100%  {
+      opacity: 1.0;
+      transform: translate3d( 0, 0, 0);
+    }
 }

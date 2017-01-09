@@ -22,18 +22,21 @@
         line-height: $p1;
         letter-spacing: .065em;
       }
+      .codepen {
+        width: 100%;
+        padding: $normal 0;
+      }
     }
   }
-
+}
 //========================================================
 // スクロールアニメーション
 //========================================================
-  article{
-    opacity: 0.0;
-    animation: article_fadeIn 1.0s ease-in-out 0.8s 1 normal;
-    animation-fill-mode: forwards;
-    ._title {}
-  }
+#article article{
+  opacity: 0.0;
+  animation: article_fadeIn 1.0s ease-in-out 0.8s 1 normal;
+  animation-fill-mode: forwards;
+  ._title {}
 }
 
 @keyframes article_fadeIn {
