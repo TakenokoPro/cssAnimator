@@ -4,7 +4,7 @@ $divier_length: 64px;
   position: relative;
   width: 100%;
   opacity: 0;
-  animation: diviver_button_fadeIn 1.0s ease-in-out 2.0s 1 normal;
+  animation: diviver_button_fadeIn 1.0s ease-in-out 2.4s 1 normal;
   animation-fill-mode: forwards;
   z-index: 1;
   .diviver_button1, .diviver_button2 {
@@ -36,6 +36,15 @@ $divier_length: 64px;
     .diviver_button1 { opacity: 1.0; }
     .diviver_button2 { opacity: 0; }
     transition: all 2.0s ease;
+  }
+}
+.progress {
+  height: 0;
+  margin: 0;
+  background-color: transparent;
+  .indeterminate {
+    background-color: #0000ff;
+    opacity: 1.0;
   }
 }
 

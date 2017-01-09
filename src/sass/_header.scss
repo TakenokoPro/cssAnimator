@@ -19,12 +19,4 @@ header {
       color: $header_color;
     }
   }
-  .progress {
-    margin: 0;
-    background-color: $header_backgound;
-    .indeterminate {
-      background-color: #0000ff;
-      opacity: 0;
-    }
-  }
 }
