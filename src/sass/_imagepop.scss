@@ -22,18 +22,18 @@
         letter-spacing: .065em;
       }
 
-      &.right {
-        left: 60%;
-        padding: $normal;
-      }
-      &.left {
-        right: 60%;
-        padding: $normal;
-      }
-      &.top {
-        top: 0%;
-        padding: $p1;
-      }
+      // &.right {
+      //   left: 60%;
+      //   padding: $normal;
+      // }
+      // &.left {
+      //   right: 60%;
+      //   padding: $normal;
+      // }
+      // &.top {
+      //   top: 0%;
+      //   padding: $p1;
+      // }
     }
   }
 }
@@ -131,4 +131,59 @@
       opacity: 1.0;
       transform: translate3d( 0, 0, 0);
     }
+}
+
+//========================================================
+// PC用
+//========================================================
+@media screen and (min-width: 600px) {
+#imagepop {
+  .pop {
+    img {
+      opacity: 1.0;
+    }
+    article {
+      padding: 0px;
+      h3 {
+        font-size: $p2;
+        line-height: $p2;
+      }
+      p {
+        margin: 0;
+        font-size: $normal;
+        line-height: $p1;
+        letter-spacing: .065em;
+      }
+
+      &.right {
+        left: 60%;
+        padding: $normal;
+      }
+      &.left {
+        right: 60%;
+        padding: $normal;
+      }
+      &.top {
+        top: 0%;
+        padding: $p1;
+      }
+    }
+  }
+}
+}
+
+//========================================================
+// スマホ用
+//========================================================
+@media screen and (max-width: 600px) {
+#imagepop {
+  .pop {
+    img {
+      filter: brightness(0.2);
+    }
+    article {
+      padding: 16px;
+    }
+  }
+}
 }

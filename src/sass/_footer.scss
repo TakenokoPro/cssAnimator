@@ -16,13 +16,15 @@ footer {
       h5 {
         border-bottom: 1px solid #666;
         padding: 16px 0;
+        pointer-events: none;
       }
     }
   }
   .legal {
     text-align: right;
-    a {
-      padding: 0 20px;
+    div {
+      display:inline-block;
+      padding: 0 10px;
     }
   }
   * {

@@ -1,7 +1,11 @@
-//SASS (.scss)
+// @import "../libs/css/materialize.min.css";
+
+//BASE SASS (.scss)
 @import "./setting.scss";
+@import "./zIndex.scss";
 @import "./header.scss";
 @import "./footer.scss";
+@import "./overlay.scss";
 
 @import "./carousel.scss";
 @import "./content.scss";
@@ -11,3 +15,13 @@
 
 // COMPONETS
 @import "./components/_diviver_button.scss";
+@import "./components/_loader.scss";
+
+body {
+  #overlay {visibility : hidden;}
+  &.overlay {
+    overflow: hidden; 
+    #root { pointer-events: none; }
+    #overlay {visibility : visible;}
+  }
+}

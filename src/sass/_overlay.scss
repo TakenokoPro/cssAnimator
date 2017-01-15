@@ -1,0 +1,29 @@
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,.99);
+}
+.overlay-item {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  .loader {
+    margin-top: -10vw;
+    top: 50%;
+  }
+}
+
+//========================================================
+// スクロールアニメーション
+//========================================================
+body.overlay {
+  #overlay {
+    overflow: hidden;
+    transition: all 1.0s ease;
+  }
+}
