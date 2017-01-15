@@ -3,25 +3,34 @@
 //BASE SASS (.scss)
 @import "./setting.scss";
 @import "./zIndex.scss";
-@import "./header.scss";
-@import "./footer.scss";
-@import "./overlay.scss";
 
-@import "./carousel.scss";
-@import "./content.scss";
-@import "./article_list.scss";
-@import "./article.scss";
-@import "./imagepop.scss";
+// HEADER
+@import "./header/header.scss";
+@import "./header/carousel.scss";
+
+// FOOTER
+@import "./footer/footer.scss";
+
+// OVERLAY
+@import "./overlay/overlay.scss";
+
+// CONTENTS
+@import "./contents/content.scss";
+@import "./contents/sideber.scss";
+@import "./contents/article_list.scss";
+@import "./contents/article.scss";
+@import "./contents/imagepop.scss";
 
 // COMPONETS
 @import "./components/_diviver_button.scss";
 @import "./components/_loader.scss";
 
-body {
-  #overlay {visibility : hidden;}
-  &.overlay {
-    overflow: hidden; 
-    #root { pointer-events: none; }
-    #overlay {visibility : visible;}
-  }
-}
+// body {
+//   background-color: #FFF;
+//   .App-overlay {visibility : hidden;}
+//   &.overlay {
+//     overflow: hidden; 
+//     .App-root { pointer-events: none; }
+//     .App-overlay {visibility : visible;}
+//   }
+// }

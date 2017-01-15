@@ -1,10 +1,10 @@
-#overlay {
+.App-overlay {
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,.99);
+  pointer-events: none;
 }
 .overlay-item {
   position: fixed;
@@ -12,9 +12,13 @@
   left: 0;
   height: 100%;
   width: 100%;
+  pointer-events: all;
   .loader {
     margin-top: -10vw;
     top: 50%;
+  }
+  &black {
+    background-color: rgba(0,0,0,.99);
   }
 }
 
@@ -22,7 +26,7 @@
 // スクロールアニメーション
 //========================================================
 body.overlay {
-  #overlay {
+  .App-overlay {
     overflow: hidden;
     transition: all 1.0s ease;
   }

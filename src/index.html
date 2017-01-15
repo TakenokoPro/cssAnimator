@@ -22,10 +22,11 @@
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body class="overlay">
-  <div id="root">
+  <div class="App">
+  <div class="App-root">
   <!-- ==================================================== -->
   <!-- HEADER -->
-  <header class="z-depth-4">
+  <div class="z-depth-4 App-header">
     <div class="header btn-group-justified">
       <a href="javascript:void(0)" class="brand"><img src="images/LOGO.svg"></a>
     </div>
@@ -35,10 +36,10 @@
       <a href="javascript:void(0)" class="btn waves-effect waves-light">About</a>
       <a onclick="onToggleOverlayClass();" class="btn waves-effect waves-light">Support</a>
     </div>
-  </header>
+  </div>
   <!-- ==================================================== -->
   <!-- CAROUSEL -->
-  <div id="carousel" class="z-depth-1">
+  <div class="App-carousel" class="z-depth-1">
     <div class="carousel carousel-slider center" data-indicators="true">
       <div class="carousel-fixed-item center"><a class="btn waves-effect white grey-text darken-text-2">button</a></div>
       <div class="carousel-item red white-text" href="#one!"><h2>First Panel</h2><p class="white-text">This is your first panel</p></div>
@@ -48,14 +49,15 @@
     </div>
   </div>
   <div class="diviver leave">
-    <div class="z-depth-3 waves-effect diviver_button1" onclick="onToggleClass('#article');onToggleClass('.diviver');"><img src="images/ic_check_white_48px.svg"></div>
-    <div class="z-depth-3 waves-effect diviver_button2" onclick="onToggleClass('#article');onToggleClass('.diviver');"><img src="images/ic_close_white_48px.svg"></div>
+    <div class="z-depth-3 waves-effect diviver_button1" onclick="onToggleClass('.App-article');onToggleClass('.diviver');"><img src="images/ic_check_white_48px.svg"></div>
+    <div class="z-depth-3 waves-effect diviver_button2" onclick="onToggleClass('.App-article');onToggleClass('.diviver');"><img src="images/ic_close_white_48px.svg"></div>
   </div>
   <div class="progress"><div class="indeterminate"></div></div>
   <!-- ==================================================== -->
+  <div class="row leave App-contents">
   <!-- ARTICLE -->
-  <div id="article" class="row leave">
-    <article class="col-md-12 z-depth-2">
+  <div class="col-sm-9 App-article leave">
+    <div class="_article col-md-12 z-depth-2">
       <time class="_date">20XX/01/12 08:00</time>
       <div class="_title">タイトル</div>
       <div class="_sentence">
@@ -79,36 +81,42 @@
         <p>ぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょう</p>
       </div>
       <hr><div class="_chips"><div class="chip _t">Twitter</div><div class="chip _f">FaceBook</div></div>
-    </article>
+    </div>
+  </div>
+  <!-- ==================================================== -->
+  <!-- SIDEBER -->
+  <div class="col-sm-3 App-sideber">
+      <div class="col-md-12 z-depth-2">コンテンツ</div>
+  </div>
   </div>
   <!-- ==================================================== -->
   <!-- IMAGEPOP -->
-  <div id="imagepop">
+  <div class="App-pop">
     <div class="pop">
       <img src="images/DSC_0126.jpg" class=""/>
-      <article class="right" data-scroll>
+      <div class="_article right" data-scroll>
         <div class="_text">
           <h3>セクション1</h3>
           <p>ぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょう</p>
         </div>
-      </article>
+      </div>
     </div>
     <div class="pop">
       <img src="images/DSC_0138.jpg" class=""/>
-      <article class="top" data-scroll>
+      <div class="_article top" data-scroll>
         <div class="_text">
           <h3>セクション1</h3>
           <p>ぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょうぶんしょう</p>
         </div>
-      </article>
+      </div>
     </div>
   </div>
   <!-- ==================================================== -->
-  <div id="article_list" class="row">
+  <div class="row App-list">
     <div id="article_list_related" class="col-sm-12">related posts</div>
     <!-- CONTANTS 1 -->
     <div class="col-sm-6 col-md-6 article_list_article" >
-      <article class="z-depth-1" onclick="" data-scroll>
+      <div class="_article z-depth-1" onclick="" data-scroll>
         <div class="waves-effect">
           <img class="_image" src="images/DSC_0126.jpg"/>
           <div class="_text">
@@ -126,11 +134,11 @@
             </div>
           </div>
         </div>
-      </article>
+      </div>
     </div>
     <!-- CONTANTS 2 -->
     <div class="col-sm-6 col-md-6 article_list_article" >
-      <article class="z-depth-1" onclick="" data-scroll>
+      <div class="_article z-depth-1" onclick="" data-scroll>
         <div class="waves-effect">
           <img class="_image" src="images/DSC_0138.jpg"/>
           <div class="_text">
@@ -146,15 +154,24 @@
                 ぶんしょうぶんしょうぶんしょうぶんしょう
                 ぶんしょうぶんしょうぶんしょうぶんしょう
               </p>
-            <div>
+            </div>
           </div>
         </div>
-      </article>
+      </div>
+    <div class="col-sm-12 col-md-12" >
+    </div>
+    <!-- Adsence -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-1456484850994926"
+        data-ad-slot="2251991893"
+        data-ad-format="auto"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
   </div>
   <!-- ==================================================== -->
   <!-- FOOTER -->
-  <footer>
+  <div class="App-footer">
     <div class="row footer">
       <div class="col-md-4 footer_item">
         <h5>カテゴリ1</h5>
@@ -183,23 +200,17 @@
       <div><a>利用規約</a></div>
       <div><a>特定商取引法に基づく表示</a></div>
     </div>
-  </footer>
+  </div>
   <!-- ==================================================== -->
   </div><!-- root -->
   <!-- ==================================================== -->
   <!-- OVERLAY -->
-  <div id="overlay">
-    <div class="overlay-item"><div class="loader">Loading...</div></div>
-    <div class="overlay-item"><div class="btn" onclick="onToggleOverlayClass();">Hidden Overlay</div></div>
+  <div class="App-overlay">
+    <div class="overlay-item black"><div class="loader">Loading...</div></div>
+    <!--<div class="overlay-item"><div class="btn" onclick="onToggleOverlayClass();">Hidden Overlay</div></div>-->
   </div>
-  <!-- Adsence -->
-  <ins class="adsbygoogle"
-      style="display:block"
-      data-ad-client="ca-pub-1456484850994926"
-      data-ad-slot="2251991893"
-      data-ad-format="auto"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   <!-- ==================================================== -->
+  </div><!-- App -->
   <!-- SCRIPT -->
   <script type="text/javascript">
   function onToggleClass(className) {

@@ -1,13 +1,13 @@
 //===============================================
 // STYLE
 //===============================================
-header {
+.App-header {
   background-color: $header_backgound;
   .header {
-    padding: $normal;
+    padding: $p2;
     text-align: center;
     img {
-      height: $p1;
+      height: $p2;
       margin: 0 auto;
     }
   }

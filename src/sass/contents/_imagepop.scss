@@ -1,4 +1,4 @@
-#imagepop {
+.App-pop {
   padding-bottom: $p1;
   pointer-events: none;
   .pop {
@@ -7,7 +7,7 @@
       width: 100%;
       background-color: #000;
     }
-    article {
+    ._article {
       position: absolute;
       top: 0;
       color: #ffffff;
@@ -41,7 +41,7 @@
 //========================================================
 // スクロールアニメーション
 //========================================================
-#imagepop {
+.App-pop {
   @for $cnt from 1 through 10{
     .pop:nth-child(#{$cnt}) {
       @if $cnt % 2 == 0 {
@@ -57,7 +57,7 @@
   }
 }
 
-#imagepop {
+.App-pop {
   @for $cnt from 1 through 10{
     .pop:nth-child(#{$cnt}) {
       &.invisible {
@@ -74,7 +74,7 @@
   }
 }
 
-#imagepop {
+.App-pop {
   .pop{
     img {
       &.invisible {
@@ -86,7 +86,7 @@
         transition: all 1.0s ease;
       }
     }
-    article {
+    ._article {
       &.invisible {
         h3, p {
           opacity: 0.0;
@@ -137,12 +137,12 @@
 // PC用
 //========================================================
 @media screen and (min-width: 600px) {
-#imagepop {
+.App-pop {
   .pop {
     img {
       opacity: 1.0;
     }
-    article {
+    ._article {
       padding: 0px;
       h3 {
         font-size: $p2;
@@ -176,12 +176,12 @@
 // スマホ用
 //========================================================
 @media screen and (max-width: 600px) {
-#imagepop {
+.App-pop {
   .pop {
     img {
       filter: brightness(0.2);
     }
-    article {
+    ._article {
       padding: 16px;
     }
   }

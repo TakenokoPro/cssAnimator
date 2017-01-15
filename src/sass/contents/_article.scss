@@ -1,11 +1,8 @@
-#article {
-  max-width: $article_max_width;
+.App-article {
   margin-bottom: 0;
-  article {
+  ._article {
     padding: $p3 $p1;
     margin: $p3 0;
-    // margin-bottom: $p2;
-    background-color: #FAFAFA;
     ._date {
       padding-left: 5px;
       letter-spacing: 5px;
@@ -81,9 +78,9 @@
 //========================================================
 // スクロールアニメーション
 //========================================================
-#article {
+.App-article {
   overflow: hidden;
-  article{
+  ._article{
     opacity: 0.0;
     animation: article_fadeIn 1.0s ease-in-out 0.8s 1 normal;
     animation-fill-mode: forwards;
@@ -122,16 +119,11 @@
 }
 
 //========================================================
-// extend class
-//========================================================
-.base_anime {}
-
-//========================================================
 // スマホ用
 //========================================================
 @media screen and (max-width: $article_max_width) {
-#article {
-  article {
+.App-article {
+  ._article {
     margin: 0;
   }
 }

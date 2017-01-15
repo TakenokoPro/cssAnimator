@@ -1,11 +1,11 @@
-#article_list {
+.App-list {
   max-width: $content_max_width;
   padding: $p3 0;
   #article_list_related {
     text-align: center;
     font-size: $p2;
   }
-  article {
+  ._article {
     margin: $p2 $m1;
     .waves-effect {
       width: 100%;
@@ -44,8 +44,8 @@
 //========================================================
 // スクロールアニメーション
 //========================================================
-#article_list {
-  article{
+.App-list {
+  ._article{
     //animation: article_list_fadeIn 1.0s ease-in-out 1.0s 1 normal;
     //animation-fill-mode: forwards;
     //opacity: 0.0;
@@ -65,7 +65,7 @@
   }
 
   @for $cnt from 1 through 10{
-    article:nth-child(#{$cnt}) {
+    ._article:nth-child(#{$cnt}) {
       //animation-delay: ($cnt*0.2)+s;
       transition-delay: ($cnt*0.2)+s;
     }
